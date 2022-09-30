@@ -1,72 +1,22 @@
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using static System.Collections.Specialized.BitVector32;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace UIShop
 {
-    public class Tests
+    internal class AddProductToCart
     {
         IWebDriver webDriver;
-
         [SetUp]
         public void StartChrome()
         {
             webDriver = new ChromeDriver(".");
             webDriver.Url = "http://shop.demoqa.com/";
             webDriver.FindElement(By.XPath("/html/body/p/a")).Click();
-        }
-
-        [Test, Category("Access the system")]
-        public void AccessTheSystemWithNotLoggedUser()
-        {
-
-
-
-            // web element Displayed
-            IWebElement navigationBar = webDriver.FindElement(By.XPath("/html/body/div[2]/header/div[1]"));
-            Boolean navibationBar_enabled = navigationBar.Enabled;
-            IWebElement header = webDriver.FindElement(By.XPath("/html/body/div[2]/header/div[2]/div/div/div"));
-            Boolean header_enabled = header.Enabled;
-
-            Assert.Pass();
-        }
-        [Test, Category("Access the system")]
-        public void AccessTheSystemWithLoggedinUser()
-        {
-
-            IWebElement navigationBar = webDriver.FindElement(By.XPath("/html/body/div[2]/header/div[1]"));
-            Boolean navibationBar_enabled = navigationBar.Enabled;
-            IWebElement header = webDriver.FindElement(By.XPath("/html/body/div[2]/header/div[2]/div/div/div"));
-            Boolean header_enabled = header.Enabled;
-            Assert.Pass();
-        }
-        [Test, Category("Add product to Cart")]
-        public void VerifyAddingTheProductToCart()
-        {
-            //LoginUserDone
-            webDriver.FindElement(By.XPath("/html/body/div[2]/header/div[1]/div/ul[2]/li[2]/a")).Click();
-            webDriver.FindElement(By.Id("username")).SendKeys("pnrkouwsohyhlgaavs@bvhrk.com");
-            webDriver.FindElement(By.Id("password")).SendKeys("Pineapple250590");
-            webDriver.FindElement(By.Name("login")).Click();
-            webDriver.FindElement(By.XPath("/html/body/div[1]/header/div[2]/div/div/div/div/a/img")).Click();
-
-
-            IWebElement singleProduct = webDriver.FindElement(By.XPath("/html/body/div[2]/div[2]/div[3]/div/div[2]/div/div/div/div[2]/div[2]/div[1]/div/h3/a"));
-            singleProduct.Click();
-            IWebElement colorDropDown = webDriver.FindElement(By.Name("attribute_pa_color"));
-            IWebElement sizeDropDown = webDriver.FindElement(By.Name("attribute_pa_size"));
-            SelectElement color = new SelectElement(colorDropDown);
-            color.SelectByValue("pink");
-            SelectElement size = new SelectElement(sizeDropDown);
-            size.SelectByValue("36");
-            webDriver.FindElement(By.XPath("/html/body/div[2]/div[2]/div/div/div[2]/div[1]/div[2]/form/div/div[2]/button")).Click();
-            //fall or assert
-
-
-
-            Assert.Pass();
         }
         [Test, Category("Navigation bar")]
         public void VerifyUserManagementSectionWithNotLoggedUser()
@@ -152,12 +102,5 @@ namespace UIShop
 
             Assert.Pass();
         }
-        [TearDown]
-          public void Close()
-            {
-                webDriver.Close();
-            }
-
     }
-    
 }
