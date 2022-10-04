@@ -102,5 +102,10 @@ namespace UIShop
 
             Assert.Pass();
         }
+        [TearDown]
+        public void Close()
+        {
+            webDriver.Close();
+        }
     }
 }
