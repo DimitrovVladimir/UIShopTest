@@ -3,7 +3,7 @@
 This application describes:
 Testcases build by requirements.
 Implement in bugtracking system Jira. 
-Their automation with C#, Selenium and NUnit Frameworks.
+Their automation with C#, Selenium WEB Driver and NUnit Frameworks.
 
 
 
