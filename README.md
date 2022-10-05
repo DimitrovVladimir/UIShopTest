@@ -25,7 +25,7 @@ May be for this i like to watch football.
 
 ## Screenshots
 
-![App Screenshot]([Requirements/ScreenShots/Homepage.png](https://github.com/DimitrovVladimir/UIShopTest/blob/master/UIShop/Requirements/ScreenShots/Homepage.png))
+![]([Requirements/ScreenShots/Homepage.png](https://github.com/DimitrovVladimir/UIShopTest/blob/master/UIShop/Requirements/ScreenShots/Homepage.png))
 ![](/ScreenShots/ProductPage.png)
 
 
