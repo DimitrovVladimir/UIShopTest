@@ -25,8 +25,8 @@ May be for this i like to watch football.
 
 ## Screenshots
 
-![]([Requirements/ScreenShots/Homepage.png](https://github.com/DimitrovVladimir/UIShopTest/blob/master/UIShop/Requirements/ScreenShots/Homepage.png))
-![](/ScreenShots/ProductPage.png)
+![HomePage]([Requirements/ScreenShots/Homepage.png](https://github.com/DimitrovVladimir/UIShopTest/blob/master/UIShop/Requirements/ScreenShots/Homepage.png))
+![ProductPage](Requirements/ScreenShots/Homepage.png](https://github.com/DimitrovVladimir/UIShopTest/blob/master/UIShop/Requirements/ScreenShots/ProductPage.png)
 
 
 ## Authors
